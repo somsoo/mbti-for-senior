@@ -7,7 +7,26 @@
   <meta name="description" content="무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요. 16가지 유형별 해설과 그래프 제공. 간편하게 나의 생활 성향을 알아보세요.">
   <meta name="keywords" content="MBTI, 어르신, 성향 검사, 무료, 테스트, 성격유형, 생활, 가족, 건강, 온라인">
   <meta name="author" content="enjoy-onepage">
+  <link rel="canonical" href="https://mbti-for-senior.enjoy-onapge.com/" />
+  <meta property="og:title" content="MBTI 어르신 성향 검사 - 무료 온라인 테스트">
+  <meta property="og:description" content="무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요. 16가지 유형별 해설과 그래프 제공.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mbti-for-senior.enjoy-onapge.com/">
+  <meta property="og:image" content="https://mbti-for-senior.enjoy-onapge.com/images/mbti-og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MBTI 어르신 성향 검사">
+  <meta name="twitter:description" content="무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요.">
+  <meta name="twitter:image" content="https://mbti-for-senior.enjoy-onapge.com/images/mbti-og-image.png">
   <link rel="icon" href="/favicon.ico" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "MBTI 어르신 성향 검사",
+    "description": "무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요. 16가지 유형별 해설과 그래프 제공.",
+    "url": "https://mbti-for-senior.enjoy-onapge.com/"
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     body {
@@ -84,8 +103,10 @@
       transition: background 0.2s;
     }
     .home-btn:hover { background-color: #0d47a1; }
+    .adsbygoogle { display: block; margin: 20px auto; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 <body>
@@ -93,6 +114,7 @@
     <section class="container" aria-labelledby="main-title">
       <h1 id="main-title">MBTI 어르신 성향 검사</h1>
       <section id="intro-page" class="question-page" aria-label="인트로">
+        <div id="ad-intro"></div>
         <h2>환영합니다!</h2>
         <p>
           이 검사는 60대 이상 어르신이 일상 속에서 어떤 성향을 가지고 계신지 알아보는 검사입니다.<br>
@@ -132,6 +154,7 @@
               <label for="ei5e"><input id="ei5e" type="radio" name="ei5" value="E" /> 금방 친해지고 먼저 말을 건다</label>
               <label for="ei5i"><input id="ei5i" type="radio" name="ei5" value="I" /> 천천히 친해진다</label>
             </div>
+            <div id="ad-ei1"></div>
             <div class="question"><span class="question-number">6.</span>
               <span class="question-title">동년배와 대화할 때 어떤 편인가요?</span>
               <label for="ei6e"><input id="ei6e" type="radio" name="ei6" value="E" /> 먼저 말을 걸고 이야기를 나눈다</label>
@@ -157,6 +180,7 @@
               <label for="ei10e"><input id="ei10e" type="radio" name="ei10" value="E" /> 먼저 인사하거나 말을 건다</label>
               <label for="ei10i"><input id="ei10i" type="radio" name="ei10" value="I" /> 그냥 지나친다</label>
             </div>
+            <div id="ad-ei2"></div>
             <div id="alert-ei" class="alert-message hidden" role="alert"></div>
             <button type="button" onclick="nextPage('ei', 'sn', 10)" aria-label="다음(SN 파트로)">다음</button>
           </fieldset>
@@ -190,6 +214,7 @@
               <label for="sn5s"><input id="sn5s" type="radio" name="sn5" value="S" /> 결과물(작품, 완성 등)</label>
               <label for="sn5n"><input id="sn5n" type="radio" name="sn5" value="N" /> 과정에서 느끼는 즐거움</label>
             </div>
+            <div id="ad-sn1"></div>
             <div class="question"><span class="question-number">6.</span>
               <span class="question-title">일상에서 문제를 해결할 때 어떤가요?</span>
               <label for="sn6s"><input id="sn6s" type="radio" name="sn6" value="S" /> 경험에 의존해 해결한다</label>
@@ -215,6 +240,7 @@
               <label for="sn10s"><input id="sn10s" type="radio" name="sn10" value="S" /> 설명서나 강의를 꼼꼼히 본다</label>
               <label for="sn10n"><input id="sn10n" type="radio" name="sn10" value="N" /> 직접 만져보며 익힌다</label>
             </div>
+            <div id="ad-sn2"></div>
             <div id="alert-sn" class="alert-message hidden" role="alert"></div>
             <button type="button" onclick="nextPage('sn', 'tf', 10)" aria-label="다음(TF 파트로)">다음</button>
           </fieldset>
@@ -248,6 +274,7 @@
               <label for="tf5t"><input id="tf5t" type="radio" name="tf5" value="T" /> 해결책을 제안한다</label>
               <label for="tf5f"><input id="tf5f" type="radio" name="tf5" value="F" /> 공감하며 들어준다</label>
             </div>
+            <div id="ad-tf1"></div>
             <div class="question"><span class="question-number">6.</span>
               <span class="question-title">가족 내에서 의견이 다를 때 어떻게 하시나요?</span>
               <label for="tf6t"><input id="tf6t" type="radio" name="tf6" value="T" /> 논리적으로 설명한다</label>
@@ -273,6 +300,7 @@
               <label for="tf10t"><input id="tf10t" type="radio" name="tf10" value="T" /> 무엇이 문제인지 함께 찾는다</label>
               <label for="tf10f"><input id="tf10f" type="radio" name="tf10" value="F" /> 힘이 되어주고 위로한다</label>
             </div>
+            <div id="ad-tf2"></div>
             <div id="alert-tf" class="alert-message hidden" role="alert"></div>
             <button type="button" onclick="nextPage('tf', 'jp', 10)" aria-label="다음(JP 파트로)">다음</button>
           </fieldset>
@@ -306,6 +334,7 @@
               <label for="jp5j"><input id="jp5j" type="radio" name="jp5" value="J" /> 변화가 불편하다</label>
               <label for="jp5p"><input id="jp5p" type="radio" name="jp5" value="P" /> 새로운 기회로 받아들인다</label>
             </div>
+            <div id="ad-jp1"></div>
             <div class="question"><span class="question-number">6.</span>
               <span class="question-title">집안 정리나 청소는?</span>
               <label for="jp6j"><input id="jp6j" type="radio" name="jp6" value="J" /> 자주 정리한다</label>
@@ -331,12 +360,16 @@
               <label for="jp10j"><input id="jp10j" type="radio" name="jp10" value="J" /> 미리 준비된 것이 편하다</label>
               <label for="jp10p"><input id="jp10p" type="radio" name="jp10" value="P" /> 즉흥적으로 맞이해도 괜찮다</label>
             </div>
+            <div id="ad-jp2"></div>
             <div id="alert-jp" class="alert-message hidden" role="alert"></div>
             <button type="submit" aria-label="결과 보기">결과 보기</button>
           </fieldset>
         </section>
       </form>
-      <section id="result" class="hidden" aria-live="polite"></section>
+      <section id="result" class="hidden" aria-live="polite">
+        <div id="ad-resultup"></div>
+        <div id="ad-resultdown"></div>
+      </section>
     </section>
     <footer>
       <small>&copy; 2025 enjoy-onepage. All rights reserved.</small>
@@ -344,6 +377,103 @@
   </main>
   <script>
     Kakao.init('b157f51afb710d60c8b6bec3dc9a2d1f');
+        // 광고 동적 삽입 함수
+    function reloadAds(selector, client, slot) {
+      const adDiv = document.querySelector(selector);
+      if (adDiv) {
+        adDiv.innerHTML = `<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="${client}"
+            data-ad-slot="${slot}"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>`;
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+      }
+    }
+    // 각 파트 진입 시 광고 새로고침
+    function showPage(type) {
+      document.querySelectorAll('.question-page').forEach(page => page.classList.add('hidden'));
+      document.getElementById('page-' + type).classList.remove('hidden');
+      if (type === 'ei') {
+        reloadAds('#ad-ei1', 'ca-pub-2228289204702106', '9155968505');
+        reloadAds('#ad-ei2', 'ca-pub-2228289204702106', '9155968505');
+      }
+      if (type === 'sn') {
+        reloadAds('#ad-sn1', 'ca-pub-2228289204702106', '9155968505');
+        reloadAds('#ad-sn2', 'ca-pub-2228289204702106', '9155968505');
+      }
+      if (type === 'tf') {
+        reloadAds('#ad-tf1', 'ca-pub-2228289204702106', '9155968505');
+        reloadAds('#ad-tf2', 'ca-pub-2228289204702106', '9155968505');
+      }
+      if (type === 'jp') {
+        reloadAds('#ad-jp1', 'ca-pub-2228289204702106', '9155968505');
+        reloadAds('#ad-jp2', 'ca-pub-2228289204702106', '9155968505');
+      }
+    }
+    // 인트로, 결과 광고
+    window.addEventListener('DOMContentLoaded', function() {
+      reloadAds('#ad-intro', 'ca-pub-2228289204702106', '7606566198');
+      reloadAds('#ad-resultup', 'ca-pub-2228289204702106', '7898727155');
+      reloadAds('#ad-resultdown', 'ca-pub-2228289204702106', '9557942112');
+      const params = new URLSearchParams(window.location.search);
+      const mbti = params.get('mbti');
+      if (mbti) {
+        document.getElementById('intro-page').classList.add('hidden');
+        document.getElementById('mbti-form').classList.add('hidden');
+        showResultByMbti(mbti);
+      }
+    });
+    function startSurvey() {
+      document.getElementById('intro-page').classList.add('hidden');
+      showPage('ei');
+    }
+    function nextPage(current, next, numQuestions) {
+      const names = [];
+      for (let i = 1; i <= numQuestions; i++) {
+        names.push(current + i);
+      }
+      let allAnswered = true;
+      for (const name of names) {
+        if (!document.querySelector(`input[name="${name}"]:checked`)) {
+          allAnswered = false;
+          break;
+        }
+      }
+      const alertDiv = document.getElementById('alert-' + current);
+      if (!allAnswered) {
+        alertDiv.textContent = "모든 문항에 답변해 주세요!";
+        alertDiv.classList.remove('hidden');
+        return;
+      } else {
+        alertDiv.classList.add('hidden');
+      }
+      showPage(next);
+    }
+    function renderDonutChart(ctx, labels, data, colors) {
+      return new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: colors,
+            borderWidth: 2,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+              labels: { font: { size: 14 } }
+            }
+          },
+          cutout: '70%',
+        }
+      });
+    }
     const chartExplanations = {
       ei: `<div class="chart-explain"><b>E</b>: 외향(사람들과 어울리며 에너지 얻음), <b>I</b>: 내향(혼자만의 시간에서 에너지 얻음)</div>`,
       sn: `<div class="chart-explain"><b>S</b>: 감각(경험과 현실을 중시), <b>N</b>: 직관(아이디어와 가능성을 중시)</div>`,
