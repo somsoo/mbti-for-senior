@@ -28,26 +28,74 @@
   }
   </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
-      font-family: "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", Arial, sans-serif;
-      background: linear-gradient(135deg, #e3f2fd 0%, #b3e0fc 100%);
-      color: #185a8d;
+      font-family: "Comic Sans MS", "Apple SD Gothic Neo", sans-serif;
+      background-color: #fff8f0;
+      color: #333;
       margin: 0;
       padding: 0;
     }
-    .container { max-width: 700px; margin: auto; padding: 20px; }
-    h1 { text-align: center; color: #2196f3; }
-    h2 { color: #1976d2; text-align: center; }
-    fieldset { border: none; margin: 0 0 24px 0; padding: 0; }
-    legend { font-weight: bold; color: #1976d2; margin-bottom: 10px; font-size: 1.1em; }
-    .question { margin-bottom: 15px; padding: 10px 16px; background-color: #f0faff; border-radius: 10px; box-shadow: 0 2px 5px rgba(33,150,243,0.07); word-break: break-word; }
-    .question label, .question input, .question button { max-width: 100%; box-sizing: border-box; }
-    .question-number { display: inline-block; font-weight: bold; color: #2196f3; margin-right: 8px; }
-    .question-title { display: block; font-size: 1.07em; font-weight: 500; margin-bottom: 4px; color: #185a8d; }
-    label { display: block; margin: 5px 0; cursor: pointer; }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ff7f50;
+    }
+    h2 {
+      color: #ff7f50;
+      text-align: center;
+    }
+    fieldset {
+      border: none;
+      margin: 0 0 24px 0;
+      padding: 0;
+    }
+    legend {
+      font-weight: bold;
+      color: #ff7f50;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+    .question {
+      margin-bottom: 15px;
+      padding: 10px 16px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      word-break: break-word;
+    }
+    .question label,
+    .question input,
+    .question button {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .question-number {
+      display: inline-block;
+      font-weight: bold;
+      color: #ff7f50;
+      margin-right: 8px;
+    }
+    .question-title {
+      display: block;
+      font-size: 1.07em;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: #444;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
     button {
-      background-color: #2196f3;
+      background-color: #ffb347;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -56,12 +104,10 @@
       cursor: pointer;
       margin: 10px auto 0 auto;
       display: block;
-      transition: background 0.2s;
     }
-    button:hover { background-color: #1565c0; }
     .kakao-share-btn {
-      background-color: #e1f5fe;
-      color: #185a8d;
+      background-color: #fee500;
+      color: #3c1e1e;
       border: none;
       padding: 10px 20px;
       border-radius: 10px;
@@ -73,24 +119,97 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      border: 1px solid #b3e0fc;
     }
-    .kakao-share-btn img { height: 22px; vertical-align: middle; }
-    .hidden { display: none; }
-    #result { margin-top: 20px; padding: 20px; background-color: #e3f2fd; border-radius: 10px; }
-    .chart-container { display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 20px; }
-    .chart-box { width: 45%; min-width: 200px; margin-bottom: 20px; text-align: center; }
-    canvas { margin: auto; display: block; }
-    .highlight { font-weight: bold; color: #1976d2; }
-    .alert-message { color: #d32f2f; font-weight: bold; text-align: center; margin-bottom: 10px; margin-top: 0; }
-    .mbti-desc { background: #f0faff; border-radius: 10px; padding: 18px 16px; margin-bottom: 28px; font-size: 1.08em; line-height: 1.7; box-shadow: 0 2px 5px rgba(33,150,243,0.06); }
-    .mbti-desc strong { color: #1976d2; font-size: 1.13em; }
-    .chart-explain { font-size: 0.97em; color: #185a8d; margin: 8px 0 16px 0; }
-    nav { text-align: center; margin-top: 40px; }
-    nav a { color: #1976d2; text-decoration: none; margin: 0 10px; font-weight: bold; }
-    footer { text-align: center; font-size: 0.95em; color: #5b7fa6; margin-top: 40px; padding: 20px 0 0 0; border-top: 1px solid #b3e0fc; }
+    .kakao-share-btn img {
+      height: 22px;
+      vertical-align: middle;
+    }
+    .hidden {
+      display: none;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff0f5;
+      border-radius: 10px;
+    }
+    .chart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .chart-box {
+      width: 45%;
+      min-width: 200px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    canvas {
+      margin: auto;
+      display: block;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #ff7f50;
+    }
+    .alert-message {
+      color: #d32f2f;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    .mbti-desc {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px 16px;
+      margin-bottom: 28px;
+      font-size: 1.08em;
+      line-height: 1.7;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .mbti-desc strong {
+      color: #ff7f50;
+      font-size: 1.13em;
+    }
+    nav {
+      text-align: center;
+      margin-top: 40px;
+    }
+    nav a {
+      color: #ff7f50;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.95em;
+      color: #888;
+      margin-top: 40px;
+      padding: 20px 0 0 0;
+      border-top: 1px solid #eee;
+    }
+    #intro-page .adsbygoogle {
+      margin-bottom: 10px;
+      display: block;
+    }
+    #ad-ei1 .adsbygoogle, #ad-ei2 .adsbygoogle,
+    #ad-sn1 .adsbygoogle, #ad-sn2 .adsbygoogle,
+    #ad-tf1 .adsbygoogle, #ad-tf2 .adsbygoogle,
+    #ad-jp1 .adsbygoogle, #ad-jp2 .adsbygoogle {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    #ad-resultup .adsbygoogle, #ad-resultdown .adsbygoogle {
+      margin-bottom: 10px;
+      display: block;
+    }
+
     .home-btn {
-      background-color: #1976d2;
+      background-color: #7fcfff;
       color: #fff;
       border: none;
       padding: 10px 22px;
@@ -100,13 +219,11 @@
       margin: 18px auto 0 auto;
       display: block;
       font-weight: bold;
-      transition: background 0.2s;
     }
-    .home-btn:hover { background-color: #0d47a1; }
-    .adsbygoogle { display: block; margin: 20px auto; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- 카카오 SDK 추가 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 <body>
@@ -114,7 +231,15 @@
     <section class="container" aria-labelledby="main-title">
       <h1 id="main-title">MBTI 어르신 성향 검사</h1>
       <section id="intro-page" class="question-page" aria-label="인트로">
-        <div id="ad-intro"></div>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-2228289204702106"
+          data-ad-slot="2369206483"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <h2>환영합니다!</h2>
         <p>
           이 검사는 60대 이상 어르신이 일상 속에서 어떤 성향을 가지고 계신지 알아보는 검사입니다.<br>
@@ -124,11 +249,13 @@
         </p>
         <button type="button" onclick="startSurvey()" aria-label="검사 시작하기">시작하기</button>
       </section>
+      <!-- 설문 폼 전체 시작 -->
       <form id="mbti-form" autocomplete="off" aria-label="MBTI 설문지">
         <!-- EI (외향/내향) -->
         <section id="page-ei" class="question-page hidden" aria-label="외향/내향">
           <fieldset>
             <legend>외향(E) / 내향(I)</legend>
+            <!-- 1~10번 질문 (EI) -->
             <div class="question"><span class="question-number">1.</span>
               <span class="question-title">동네에서 아는 사람을 만나면 어떻게 하시나요?</span>
               <label for="ei1e"><input id="ei1e" type="radio" name="ei1" value="E" /> 먼저 인사하며 이야기를 나눈다</label>
@@ -189,6 +316,7 @@
         <section id="page-sn" class="question-page hidden" aria-label="감각/직관">
           <fieldset>
             <legend>감각(S) / 직관(N)</legend>
+            <!-- 1~10번 질문 (SN) -->
             <div class="question"><span class="question-number">1.</span>
               <span class="question-title">새로운 가전제품을 사용할 때 어떻게 하시나요?</span>
               <label for="sn1s"><input id="sn1s" type="radio" name="sn1" value="S" /> 설명서를 꼼꼼히 읽고 따라한다</label>
@@ -249,6 +377,7 @@
         <section id="page-tf" class="question-page hidden" aria-label="사고/감정">
           <fieldset>
             <legend>사고(T) / 감정(F)</legend>
+            <!-- 1~10번 질문 (TF) -->
             <div class="question"><span class="question-number">1.</span>
               <span class="question-title">가족이나 친구가 고민을 이야기할 때 어떻게 하시나요?</span>
               <label for="tf1t"><input id="tf1t" type="radio" name="tf1" value="T" /> 해결 방법을 먼저 생각해서 조언한다</label>
@@ -309,6 +438,7 @@
         <section id="page-jp" class="question-page hidden" aria-label="판단/인식">
           <fieldset>
             <legend>판단(J) / 인식(P)</legend>
+            <!-- 1~10번 질문 (JP) -->
             <div class="question"><span class="question-number">1.</span>
               <span class="question-title">하루 일정을 어떻게 보내시나요?</span>
               <label for="jp1j"><input id="jp1j" type="radio" name="jp1" value="J" /> 미리 계획을 세우고 그 계획대로 움직인다</label>
@@ -366,31 +496,21 @@
           </fieldset>
         </section>
       </form>
-      <section id="result" class="hidden" aria-live="polite">
-        <div id="ad-resultup"></div>
-        <div id="ad-resultdown"></div>
-      </section>
+      <!-- 설문 폼 전체 끝 -->
+      <section id="result" class="hidden" aria-live="polite"></section>
     </section>
     <footer>
       <small>&copy; 2025 enjoy-onepage. All rights reserved.</small>
     </footer>
   </main>
   <script>
+    // 카카오 SDK 초기화 (본인의 JavaScript 키로 교체)
     Kakao.init('b157f51afb710d60c8b6bec3dc9a2d1f');
-        // 광고 동적 삽입 함수
-    function reloadAds(selector, client, slot) {
-      const adDiv = document.querySelector(selector);
-      if (adDiv) {
-        adDiv.innerHTML = `<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="${client}"
-            data-ad-slot="${slot}"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>`;
-        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
-      }
+
+    function startSurvey() {
+      document.getElementById('intro-page').classList.add('hidden');
+      showPage('ei');
     }
-    // 각 파트 진입 시 광고 새로고침
     function showPage(type) {
       document.querySelectorAll('.question-page').forEach(page => page.classList.add('hidden'));
       document.getElementById('page-' + type).classList.remove('hidden');
@@ -410,23 +530,6 @@
         reloadAds('#ad-jp1', 'ca-pub-2228289204702106', '9155968505');
         reloadAds('#ad-jp2', 'ca-pub-2228289204702106', '9155968505');
       }
-    }
-    // 인트로, 결과 광고
-    window.addEventListener('DOMContentLoaded', function() {
-      reloadAds('#ad-intro', 'ca-pub-2228289204702106', '7606566198');
-      reloadAds('#ad-resultup', 'ca-pub-2228289204702106', '7898727155');
-      reloadAds('#ad-resultdown', 'ca-pub-2228289204702106', '9557942112');
-      const params = new URLSearchParams(window.location.search);
-      const mbti = params.get('mbti');
-      if (mbti) {
-        document.getElementById('intro-page').classList.add('hidden');
-        document.getElementById('mbti-form').classList.add('hidden');
-        showResultByMbti(mbti);
-      }
-    });
-    function startSurvey() {
-      document.getElementById('intro-page').classList.add('hidden');
-      showPage('ei');
     }
     function nextPage(current, next, numQuestions) {
       const names = [];
@@ -578,60 +681,7 @@
       <strong>관계 팁</strong>: 가끔은 한걸음 물러서서, 가족이나 친구의 이야기를 충분히 들어주는 연습도 해보세요.<br>
       <strong>추천 활동</strong>: 동네 프로젝트 리더, 여행 계획, 취미 동호회 운영.<br>`
     };
-    function startSurvey() {
-      document.getElementById('intro-page').classList.add('hidden');
-      showPage('ei');
-    }
-    function showPage(type) {
-      document.querySelectorAll('.question-page').forEach(page => page.classList.add('hidden'));
-      document.getElementById('page-' + type).classList.remove('hidden');
-    }
-    function nextPage(current, next, numQuestions) {
-      const names = [];
-      for (let i = 1; i <= numQuestions; i++) {
-        names.push(current + i);
-      }
-      let allAnswered = true;
-      for (const name of names) {
-        if (!document.querySelector(`input[name="${name}"]:checked`)) {
-          allAnswered = false;
-          break;
-        }
-      }
-      const alertDiv = document.getElementById('alert-' + current);
-      if (!allAnswered) {
-        alertDiv.textContent = "모든 문항에 답변해 주세요!";
-        alertDiv.classList.remove('hidden');
-        return;
-      } else {
-        alertDiv.classList.add('hidden');
-      }
-      showPage(next);
-    }
-    function renderDonutChart(ctx, labels, data, colors) {
-      return new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-          labels: labels,
-          datasets: [{
-            data: data,
-            backgroundColor: colors,
-            borderWidth: 2,
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'bottom',
-              labels: { font: { size: 14 } }
-            }
-          },
-          cutout: '70%',
-        }
-      });
-    }
+
     function highlightPair(aLabel, aCount, bLabel, bCount) {
       const total = aCount + bCount;
       const aPercent = total === 0 ? 0 : Math.round((aCount / total) * 100);
@@ -642,6 +692,7 @@
         return `${aLabel} ${aPercent}% / <span class="highlight">${bLabel} ${bPercent}%</span>`;
       }
     }
+    // 결과 공유 및 홈 버튼 추가
     function renderKakaoShare(mbti, desc) {
       return `
         <button class="kakao-share-btn" id="kakao-share-btn" type="button" aria-label="카카오톡으로 결과 공유">
@@ -682,8 +733,10 @@
         (counts['T'] > counts['F'] ? 'T' : 'F') +
         (counts['J'] > counts['P'] ? 'J' : 'P');
       let chartHtml = `
+        <div id="ad-resultup"></div>
         <h2>당신의 MBTI는 <span class="highlight">${mbti}</span>입니다!</h2>
         <div class="mbti-desc">${descriptions[mbti] || "아직 준비 중인 해설입니다."}</div>
+        <div id="ad-resultdown"></div>
         <div class="chart-container">
           <div class="chart-box">
             <canvas id="chart-ei" width="180" height="180"></canvas>
@@ -720,26 +773,27 @@
         document.getElementById('chart-ei'),
         ['E', 'I'],
         [counts['E'], counts['I']],
-        ['#64b5f6', '#1976d2']
+        ['#ffb347', '#7fcfff']
       );
       renderDonutChart(
         document.getElementById('chart-sn'),
         ['S', 'N'],
         [counts['S'], counts['N']],
-        ['#4fc3f7', '#0288d1']
+        ['#ffd966', '#b4e197']
       );
       renderDonutChart(
         document.getElementById('chart-tf'),
         ['T', 'F'],
         [counts['T'], counts['F']],
-        ['#81d4fa', '#01579b']
+        ['#b39ddb', '#ffb6b9']
       );
       renderDonutChart(
         document.getElementById('chart-jp'),
         ['J', 'P'],
         [counts['J'], counts['P']],
-        ['#29b6f6', '#90caf9']
+        ['#ff7f50', '#8dd3c7']
       );
+      // 카카오톡 공유 버튼 이벤트 등록
       setTimeout(function() {
         const shareBtn = document.getElementById('kakao-share-btn');
         if (shareBtn) {
@@ -749,18 +803,18 @@
               content: {
                 title: '나의 MBTI 검사 결과',
                 description: `나의 MBTI는 ${mbti}입니다! 검사 결과와 해설을 확인해보세요.`,
-                imageUrl: '/images/mbti-og-image.png',
+                imageUrl: 'https://mbti-job-test.enjoy-onepage.com/images/mbti-og-image.png',
                 link: {
-                  mobileWebUrl: `/?mbti=${mbti}`,
-                  webUrl: `/?mbti=${mbti}`
+                  mobileWebUrl: `https://mbti-job-test.enjoy-onepage.com/?mbti=${mbti}`,
+                  webUrl: `https://mbti-job-test.enjoy-onepage.com/?mbti=${mbti}`
                 }
               },
               buttons: [
                 {
                   title: '나도 검사하기',
                   link: {
-                    mobileWebUrl: '/',
-                    webUrl: '/'
+                    mobileWebUrl: 'https://mbti-job-test.enjoy-onepage.com/',
+                    webUrl: 'https://mbti-job-test.enjoy-onepage.com/'
                   }
                 }
               ]
@@ -768,6 +822,11 @@
           };
         }
       }, 200);
+
+      // 결과 페이지 상단 광고
+      reloadAds('#ad-resultup', 'ca-pub-2228289204702106', '7898727155');
+      // 결과 페이지 하단 광고
+      reloadAds('#ad-resultdown', 'ca-pub-2228289204702106', '9557942112');
     });
     window.addEventListener('DOMContentLoaded', function() {
       const params = new URLSearchParams(window.location.search);
@@ -778,6 +837,7 @@
         showResultByMbti(mbti);
       }
     });
+  
     function showResultByMbti(mbti) {
       let chartHtml = `
         <h2>당신의 MBTI는 <span class="highlight">${mbti}</span>입니다!</h2>
@@ -788,6 +848,24 @@
       const resultDiv = document.getElementById('result');
       resultDiv.innerHTML = chartHtml;
       resultDiv.classList.remove('hidden');
+    };
+    function reloadAds(containerSelector, adClient, adSlot) {
+      const container = document.querySelector(containerSelector);
+      if (container) {
+        // 기존 광고 태그 제거
+        container.innerHTML = '';
+        // 새 광고 태그 생성
+        const ins = document.createElement('ins');
+        ins.className = 'adsbygoogle';
+        ins.style.display = 'block';
+        ins.setAttribute('data-ad-client', adClient);
+        ins.setAttribute('data-ad-slot', adSlot);
+        ins.setAttribute('data-ad-format', 'auto');
+        ins.setAttribute('data-full-width-responsive', 'true');
+        container.appendChild(ins);
+        // 광고 스크립트 실행
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
     };
   </script>
 </body>
