@@ -21,13 +21,57 @@
 <meta content="https://mbti-for-senior.enjoy-onepage.com/og-image.png" name="twitter:image"/>
 <link href="/favicon.ico" rel="icon"/>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "MBTI 어르신 성향 검사",
-    "description": "무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요. 16가지 유형별 해설과 그래프 제공.",
-    "url": "https://mbti-for-senior.enjoy-onepage.com/"
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://mbti-for-senior.enjoy-onepage.com/#webapp",
+      "name": "MBTI 어르신 성향 검사",
+      "url": "https://mbti-for-senior.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "무료 MBTI 어르신 성향 검사로 나의 생활 스타일과 강점을 진단하세요. 16가지 유형별 해설과 그래프 제공.",
+      "image": "https://mbti-for-senior.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mbti-for-senior.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "젊었을 때와 나이 들어서 검사 결과가 달라질 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 인간은 나이가 들면서 자신의 열등 기능을 성숙시키고 통합하는 심리적 개성화(Individuation) 과정을 거치므로 성향이 유연하게 변화할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "은퇴 후 우울감(빈둥지 증후군)에 어떤 유형이 취약한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "사회적 인정과 목표 달성에 익숙했던 성향일수록 역할 상실감이 클 수 있으므로, 새로운 소일거리나 사회 공헌 활동을 조기에 마련하는 것이 좋습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "검사 결과를 어떻게 일상에 적용하면 좋은가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "내가 편안함을 느끼는 취미 활동을 선택하고, 가족 구성원과의 대화 시 '틀린 것이 아니라 서로 다른 성향'임을 인정하는 대화법을 실천하세요."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <style>
     *, *::before, *::after {
