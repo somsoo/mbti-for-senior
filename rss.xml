@@ -1,46 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MBTI 어르신 성향 검사 - 무료 온라인 테스트</title>
-    <link>https://mbti-for-senior.enjoy-onepage.com/</link>
-    <description>MBTI 어르신 성향 검사 - 무료 온라인 테스트 실시간 온라인 도구 및 팩트 기반 전문 칼럼 피드</description>
-    <language>ko-KR</language>
-    <lastBuildDate>Sat, 12 Sep 2026 03:00:00 +0900</lastBuildDate>
-    <atom:link href="https://mbti-for-senior.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MBTI 어르신 성향 검사 - 무료 온라인 테스트</title>
-      <link>https://mbti-for-senior.enjoy-onepage.com/</link>
-      <guid isPermaLink="true">https://mbti-for-senior.enjoy-onepage.com/</guid>
-      <description>MBTI 어르신 성향 검사 - 무료 온라인 테스트 실시간 온라인 무료 도구 및 시뮬레이터</description>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>MBTI 어르신 성향 검사 - 무료 온라인 테스트 서비스 소개 및 산출 공식 안내</title>
-      <link>https://mbti-for-senior.enjoy-onepage.com/about.html</link>
-      <guid isPermaLink="true">https://mbti-for-senior.enjoy-onepage.com/about.html</guid>
-      <description>MBTI 어르신 성향 검사 - 무료 온라인 테스트의 데이터 처리 원칙, 공식 산출 로직 및 검증 기준입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>MBTI 어르신 성향 검사 - 무료 온라인 테스트 개인정보처리방침</title>
-      <link>https://mbti-for-senior.enjoy-onepage.com/privacy.html</link>
-      <guid isPermaLink="true">https://mbti-for-senior.enjoy-onepage.com/privacy.html</guid>
-      <description>MBTI 어르신 성향 검사 - 무료 온라인 테스트의 개인정보 보호 및 100% 브라우저 메모리 로컬 연산 보안 정책입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>어르신·시니어를 위한 쉬운 성향 테스트: 인생 2막 여가와 관계 맺기 | MBTI 어르신 성향 검사 - 무료 온라인 테스트</title>
-      <link>https://mbti-for-senior.enjoy-onepage.com/guides/guide1.html</link>
-      <guid isPermaLink="true">https://mbti-for-senior.enjoy-onepage.com/guides/guide1.html</guid>
-      <description>복잡한 영어 약자 대신 &amp;#x27;활동가형, 사색가형, 다정형, 원칙형&amp;#x27;으로 쉽게 풀어낸 은퇴 후 라이프스타일 가이드입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 02:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>자녀·손주와의 갈등 없는 소통법: 세대 공감을 이끄는 경청의 대화 기술 | MBTI 어르신 성향 검사 - 무료 온라인 테스트</title>
-      <link>https://mbti-for-senior.enjoy-onepage.com/guides/guide2.html</link>
-      <guid isPermaLink="true">https://mbti-for-senior.enjoy-onepage.com/guides/guide2.html</guid>
-      <description>훈계와 잔소리 대신 공감과 지지를 전하는 &amp;#x27;I-Message(나 전달법)&amp;#x27;와 MZ 손주 세대와의 교감 팁입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 02:15:00 +0900</pubDate>
-    </item>
-  </channel>
+<channel>
+  <title>어르신 성향 검사 | 큰 글씨 40문항으로 보는 일상 속 나의 성향</title>
+  <link>https://mbti-for-senior.enjoy-onepage.com/</link>
+  <description>60대 이상 어르신이 일상 속 40문항에 답하면 외향·내향, 감각·직관, 사고·감정, 판단·인식 네 지표로 나의 성향을 보여 줍니다. 큰 글씨, 5:5는 직접 고르기, 답은 이 기기에만 저장.</description>
+  <language>ko-kr</language>
+  <atom:link href="https://mbti-for-senior.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Wed, 30 Sep 2026 08:30:00 GMT</lastBuildDate>
+  <item>
+    <title>이용약관 | 어르신 성향 검사</title>
+    <link>https://mbti-for-senior.enjoy-onepage.com/terms.html</link>
+    <guid>https://mbti-for-senior.enjoy-onepage.com/terms.html</guid>
+    <description>재미와 자기 이해를 위한 자기 점검이며 심리 진단이 아닙니다.</description>
+    <pubDate>Wed, 30 Sep 2026 08:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>개인정보처리방침 | 어르신 성향 검사</title>
+    <link>https://mbti-for-senior.enjoy-onepage.com/privacy.html</link>
+    <guid>https://mbti-for-senior.enjoy-onepage.com/privacy.html</guid>
+    <description>고른 답은 이 브라우저에만 저장하며 운영자에게 보내지 않습니다.</description>
+    <pubDate>Wed, 30 Sep 2026 08:30:00 GMT</pubDate>
+  </item>
+</channel>
 </rss>
